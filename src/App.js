@@ -7,13 +7,14 @@ import TodoList from "./components/list";
 
 function App() {
   const [inTxt, setInTxt] = useState("");
+  const [tasks, setTasks] = useState([]);
   return (
     <div className="App">
       <header>
         <h1>Plan Your Day! {/*inTxt*/}</h1>
       </header>
-      <Form setInTxt={setInTxt}/>
-      <TodoList />
+      <Form inTxt= {inTxt} setInTxt={setInTxt} tasks={tasks} setTasks={setTasks}/>
+      <TodoList tasks={tasks} setTasks={setTasks}/>
     </div>
   );
 }

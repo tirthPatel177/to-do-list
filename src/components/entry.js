@@ -1,15 +1,24 @@
 import React from 'react';
 
-const Form = (props) => {
+const Form = ({inTxt, setInTxt, tasks, setTasks}) => {
     const inTxtHandler = (e) => {
-        console.log(e.target.value);
-        props.setInTxt(e.target.value);
+        // console.log(e.target.value);
+        setInTxt(e.target.value);
+    };
+
+    const submitTaskHandler = (e) => {
+        e.preventDefault();
+        setTasks([
+            ...tasks,
+            {text: inTxt, completed:false, id:Math.random()*1000}
+        ]);
+        setInTxt("");
     };
 
     return(
         <form>
-            <input onChange={inTxtHandler} type="text" className="todo-input"/>
-            <button className="todo-button" type='submit'>
+            <input value={inTxt} onChange={inTxtHandler} type="text" className="todo-input"/>
+            <button onClick={submitTaskHandler} className="todo-button" type='submit'>
                 {/* Look for other icons if available */}
                 <i className='fas fa-plus-square'></i>
             </button>
