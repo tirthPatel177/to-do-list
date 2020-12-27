@@ -1,9 +1,8 @@
+#Todo Web-App
 Created a to-do Web-app using React!
 App is fully functional.
 It is Fairly Responsive.
 It doesn't gives you best experience on small screens.
-
-# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
