@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Form = ({inTxt, setInTxt, tasks, setTasks}) => {
+const Form = ({inTxt, setInTxt, tasks, setTasks, setOption}) => {
     const inTxtHandler = (e) => {
         // console.log(e.target.value);
         setInTxt(e.target.value);
@@ -15,6 +15,11 @@ const Form = ({inTxt, setInTxt, tasks, setTasks}) => {
         setInTxt("");
     };
 
+    const optionHandler = (e) => {
+        // console.log(e.target.value);
+        setOption(e.target.value);
+    };
+
     return(
         <form>
             <input value={inTxt} onChange={inTxtHandler} type="text" className="todo-input"/>
@@ -23,7 +28,7 @@ const Form = ({inTxt, setInTxt, tasks, setTasks}) => {
                 <i className='fas fa-plus-square'></i>
             </button>
             <div className="select">
-                <select name="todos" className="filter-todo">
+                <select onChange={optionHandler} name="todos" className="filter-todo">
                     <option value="all"> All </option>
                     <option value="completed"> Completed </option>
                     <option value="unfinished"> Unfinished </option>

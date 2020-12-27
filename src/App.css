@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(135deg, #55c5e79c 10%, #0f13e9c7 100%);
+  background-image: linear-gradient(135deg, #090979 10%, #00d4ff 100%);
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Bangers', cursive;
   min-height: 100vh;
 }
 header {
@@ -116,7 +116,7 @@ select {
 }
 select {
   color: #4e17e7;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Bangers', cursive;
   cursor: pointer;
   width: 12rem;
 }
@@ -130,6 +130,20 @@ select {
   background: #4e17e7;
   cursor: pointer;
   pointer-events: none;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(58, 19, 231);
+  color: white;
+  text-align: center;
+}
+
+a{
+  color: white;
 }
 /* Transition */
 /*
