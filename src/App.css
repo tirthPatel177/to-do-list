@@ -145,6 +145,15 @@ select {
 a{
   color: white;
 }
+
+.todo-input {
+  /* margin: 1rem;
+  margin-left: 0; */
+  margin-left: 1rem;
+  position: relative;
+  overflow: hidden;
+  width: 30vh;
+}
 /* Transition */
 /*
 .select:hover::after {
